@@ -1,0 +1,411 @@
+:root {
+    --dorado: #fbc83f;
+    --blancoroto: #f5f5f5;
+    --colorfuente: #333;
+    --negro: #000;
+    --tamaño-fuente-base: 16px;
+    --tamaño-fuente-subtitulos: 2em;
+    --tamaño-fuente-titulo: 4em;
+    --fuente-base: "Scheherazade New", serif;
+    --fuente-titulo: "Anta", sans-serif;
+}
+
+/* Reset y base */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navegación */
+.nav {
+    z-index: 1000;
+    background-color: white;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: auto;
+    overflow: visible;
+    box-shadow: 0 0 20px 0 #3335;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.nav img {
+    max-width: 90px;
+    margin: 10px;
+    float: none;
+}
+
+.nav__menu {
+    margin-left: 0;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    position: static;
+    background: none;
+    box-shadow: none;
+    flex-direction: row;
+    padding: 0;
+    z-index: 1002;
+}
+
+.nav__menu__item {
+    padding-right: 10px;
+    margin-right: 20px;
+    margin-top: 0;
+    float: none;
+}
+
+.nav__menu__item a {
+    padding: 5px 15px;
+    color: var(--colorfuente);
+    text-decoration: none;
+    font-family: var(--fuente-base);
+    font-size: 1.2em;
+}
+
+.nav__menu__item a:hover {
+    background-color: var(--dorado);
+    border-radius: 5px;
+    transition: background-color 0.43s ease;
+}
+
+.nav__toggle {
+    display: none;
+    font-size: 2em;
+    background: none;
+    border: none;
+    color: var(--colorfuente);
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    z-index: 1003;
+}
+
+/*Banner*/
+.banner {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    color: white;
+}
+
+.banner img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.57);
+    z-index: 1;
+}
+
+.banner h1{
+    position: relative;
+    z-index: 2;
+    font-family: var(--fuente-titulo);
+    padding: 20px;
+    margin: 0 50px;
+    font-size: 3.7em;
+}
+.banner h1 strong:hover {
+    color: var(--dorado);
+    transition: color 0.5s ease;
+}
+
+/*Contenido*/
+.contenido{
+    background-color: #eee;
+    margin: 100px;
+    text-align: center;
+    font-size: 1.2em;
+    font-family: var(--fuente-base);
+    line-height: 1.8em;
+}
+.contenido audio{
+    padding: 10px;
+    width: 90%;
+}
+.contenido >div{
+    text-align: justify;
+    padding: 0 20px;
+}
+.contenido p{
+    margin-bottom: 20px;
+}
+.fecha{
+    padding: 20px;
+    font-style: italic;
+}
+.texto{
+    padding-right:50px;
+    vertical-align: top;
+    width: 48%;
+    display: inline-block;
+}
+.bloqueVideo video{
+    width: 48%;
+    height: auto;
+    display: inline-block;
+    border-radius: 10px;
+    box-shadow:  0 0 20px 0 #3335;
+}
+.bloqueVideo img{
+    width: 48%;
+    object-fit: cover;
+    height: auto;
+    display: inline-block;
+    border-radius: 10px;
+    box-shadow:  0 0 20px 0 #3335;
+}
+.bloqueVideo img{
+    height: 400px;
+    margin: 50px 0;
+}
+.contenido a{
+    text-decoration: none;
+}
+.contenido a:hover{
+    text-decoration: underline;
+}
+.resultado ul{
+    padding-inline: 50px;
+    margin-bottom: 20px;
+}
+/*Footer*/
+
+footer {
+    background-color: var(--negro);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    clear: both;
+    position: relative;
+    
+}
+.bloque{
+    vertical-align: top;
+    margin-left: 107px;
+    padding: 20px;
+    display: inline-block;
+    margin-right: 10px;
+    position: relative;
+    top: 10px;
+}
+footer::after{
+    content: "";
+    clear: both;
+}
+footer img {
+    width: 30px;
+    height: auto;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+footer h3 {
+    font-family: var(--fuente-titulo);
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: var(--dorado);
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+}
+
+footer ul li {
+    margin: 5px 0;
+}
+
+footer ul li a {
+    color: white;
+    text-decoration: none;
+    font-family: var(--fuente-base);
+    font-size: 1em;
+    transition: color 0.3s ease;
+}
+
+footer ul li a:hover {
+    color: var(--dorado);
+}
+
+footer p {
+    font-size: 0.9em;
+    color: #bbb;
+    text-align: center;
+}
+
+
+/* RESPONSIVE: móvil (pantallas de 768px o menos) */
+@media (max-width: 768px) {
+    .nav {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+    .nav img {
+        margin: 10px;
+    }
+    .nav__toggle {
+        display: block;
+    }
+    .nav__menu {
+        display: none;
+        flex-direction: column;
+        background-color: white;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100vw;
+        padding: 10px 0;
+        z-index: 2000;
+        box-shadow: 0 4px 20px 0 #3335;
+        border-top: 1px solid #eee;
+    }
+    .nav__menu.show {
+        display: flex;
+    }
+    .nav__menu__item {
+        margin: 10px 0;
+        text-align: center;
+        padding-right: 0;
+    }
+
+    /* Banner */
+    .banner {
+        padding: 15px; /* Reducir padding general */
+        height: auto; /* Altura automática para el banner */
+    }
+
+    .banner h1 {
+        font-size: 1.8em; /* Reducir tamaño del título principal */
+        padding: 10px; /* Reducir padding del título */
+        margin: 0; /* Eliminar margen lateral */
+        line-height: 1.3em; /* Ajustar altura de línea */
+    }
+
+    .banner img {
+        height: 200px; /* Altura fija o max-height para la imagen del banner */
+        width: 100%; /* Asegurar que ocupe todo el ancho */
+        object-fit: cover; /* Mantener el recorte de la imagen */
+        filter: brightness(0.3); /* Ajustar el brillo si es necesario */
+    }
+
+    /* Contenido del Artículo */
+    .contenido {
+        margin: 20px 15px; /* Reducir márgenes laterales */
+        font-size: 1em; /* Ajustar tamaño de fuente base */
+        line-height: 1.6em; /* Ajustar altura de línea */
+        padding: 20px; /* Eliminar padding principal para que los divs internos lo controlen */
+    }
+
+    .contenido audio {
+        width: 100%; /* El reproductor de audio ocupa todo el ancho */
+        padding: 0; /* Eliminar padding */
+        margin-bottom: 20px; /* Espacio inferior */
+    }
+
+    .contenido > div {
+        padding: 0 0; /* Eliminar padding horizontal, cada párrafo tendrá su propio margen */
+        margin-bottom: 20px; /* Espacio entre bloques de texto */
+    }
+
+    .contenido p {
+        margin-bottom: 15px; /* Reducir margen inferior de los párrafos */
+        text-align: justify; /* Mantener justificado o cambiar a left */
+    }
+
+    .fecha {
+        padding: 10px 0; /* Ajustar padding */
+        text-align: center; /* Centrar la fecha */
+        font-size: 0.9em; /* Ajustar tamaño de fuente */
+    }
+
+    .bloqueVideo {
+        display: block; /* Convertir a bloque para que los elementos se apilen */
+        margin-bottom: 30px; /* Espacio después del bloque */
+    }
+
+    .bloqueVideo .texto {
+        display: block; /* El texto ocupa todo el ancho */
+        width: 100%; /* Ocupar todo el ancho */
+        padding-right: 0; /* Eliminar padding derecho */
+        margin-bottom: 20px; /* Espacio entre texto e imagen/video */
+    }
+
+    .bloqueVideo video,
+    .bloqueVideo img {
+        display: block; /* La imagen/video ocupa todo el ancho */
+        width: 100%; /* Ocupar todo el ancho */
+        height: auto; /* Altura automática */
+        max-height: 250px; /* Limitar la altura máxima */
+        object-fit: cover; /* Asegurar que la imagen se recorte si es necesario */
+        margin: 0 auto; /* Centrar la imagen/video */
+    }
+    .bloqueVideo img {
+        margin: 20px auto; /* Ajustar margen superior e inferior para la imagen */
+    }
+
+
+    .resultado {
+        margin-top: 30px; /* Espacio superior */
+        margin-bottom: 30px; /* Espacio inferior */
+        text-align: left; /* Alinear texto a la izquierda */
+    }
+
+    .resultado h3 {
+        font-size: 1.3em; /* Ajustar tamaño del título */
+        margin-bottom: 15px;
+        text-align: center; /* Centrar el título de resultado */
+    }
+
+    .resultado ul {
+        padding-inline: 20px; /* Reducir padding de la lista */
+        margin-bottom: 15px;
+    }
+
+    .resultado ul li {
+        margin-bottom: 8px; /* Espacio entre ítems de lista */
+        font-size: 0.95em; /* Ajustar tamaño de fuente */
+    }
+
+    .reflexion {
+        margin-top: 30px; /* Espacio superior */
+        text-align: left; /* Alinear texto a la izquierda */
+    }
+    
+    /* Footer */
+    footer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .bloque {
+      width: 90%;
+      margin: 10px 0;
+      padding: 10px;
+    }
+  
+    .bloque ul {
+      text-align: center;
+    }
+  
+    footer p {
+      text-align: center;
+    }
+  }
+  

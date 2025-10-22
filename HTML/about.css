@@ -1,0 +1,701 @@
+:root {
+    --dorado: #fbc83f;
+    --blancoroto: #f5f5f5;
+    --colorfuente: #333;
+    --negro: #000;
+    --tamaño-fuente-base: 16px;
+    --tamaño-fuente-subtitulos: 2em;
+    --tamaño-fuente-titulo: 4em;
+    --fuente-base: "Scheherazade New", serif;
+    --fuente-titulo: "Anta", sans-serif;
+    --amarillo: #f8e000;
+    --verde: #1a9f4c;
+    --azul:#063190;
+    --rojo:#d80b1a;
+}
+/* Reset y base */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navegación */
+.nav {
+    z-index: 1000;
+    background-color: white;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: auto;
+    overflow: visible;
+    box-shadow: 0 0 20px 0 #3335;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.nav img {
+    max-width: 90px;
+    margin: 10px;
+    float: none;
+}
+
+.nav__menu {
+    margin-left: 0;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    position: static;
+    background: none;
+    box-shadow: none;
+    flex-direction: row;
+    padding: 0;
+    z-index: 1002;
+}
+
+.nav__menu__item {
+    padding-right: 10px;
+    margin-right: 20px;
+    margin-top: 0;
+    float: none;
+}
+
+.nav__menu__item a {
+    padding: 5px 15px;
+    color: var(--colorfuente);
+    text-decoration: none;
+    font-family: var(--fuente-base);
+    font-size: 1.2em;
+}
+
+.nav__menu__item a:hover {
+    background-color: var(--dorado);
+    border-radius: 5px;
+    transition: background-color 0.43s ease;
+}
+
+.nav__toggle {
+    display: none;
+    font-size: 2em;
+    background: none;
+    border: none;
+    color: var(--colorfuente);
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    z-index: 1003;
+}
+
+/*Sobre Nosotros*/
+.sobre-nosotros{
+    margin: 50px;
+    text-align: center;
+
+}
+.sobre-nosotros>h2{
+    color: var(--colorfuente);
+    font-family: var(--fuente-titulo);
+    font-size: 2em;
+}
+.sobre-nosotros__historia{
+    color: var(--colorfuente);
+    font-family: var(--fuente-base);
+    width: 100%;
+    padding: 10px 30px;
+    overflow: hidden;
+    text-align: justify;
+}
+.sobre-nosotros__historia div{
+    font-size: 1.2em;
+    width: 45%;
+    float: left;
+    vertical-align: top;
+    line-height: 1.6em;
+    padding-top: 90px;
+}
+.sobre-nosotros__historia div h3{
+    font-size: 1.6em;
+    padding-bottom: 1em;
+}
+.sobre-nosotros__historia img{
+    margin-right: 20px;
+    margin-top: 5em;
+    width: 45%;
+    float: right;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1) ;
+}
+/*Filosofía y Valores*/
+.valores{
+    margin: 50px;
+    text-align: center;
+    position: relative;
+}
+.valores__filosofia{
+    padding: 10px 30px;
+}
+.valores__filosofia h3{
+    font-size: 1.8em;
+    font-family: var(--fuente-base);
+    color: var(--colorfuente);
+    padding-bottom: 20px;
+}
+.instagram-media{
+    float: left;
+    margin-left: 20px;
+    width: 45%;
+    height: 500px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.principios {
+    width: 45%;
+    height: 500px;
+    position: relative;
+    margin-left: 55%;
+    padding: 20px;
+    overflow: hidden;
+}
+.principio {
+    position: absolute;
+    padding: 10px 5px;
+    color: white;
+    border-radius: 5px;
+    font-weight: bold;
+    transform-origin: center;
+}
+.principio {
+    padding: 5px 15px;
+    border: 1px solid var(--dorado);
+    border-radius: 5px;
+}
+.principio:first-child:hover{
+    border: none;
+    background-color: var(--amarillo);
+    color: var(--blancoroto);
+    transition: all .4s ease-in-out;
+}
+.principio:nth-child(2):hover{
+    border: none;
+    background-color: var(--verde);
+    color: var(--blancoroto);
+    transition: all .4s ease-in-out;
+}
+.principio:nth-child(3):hover{
+    border: none;
+    background-color: var(--azul);
+    color: var(--blancoroto);
+    transition: all .4s ease-in-out;
+}
+.principio:nth-child(4):hover{
+    border: none;
+    background-color: var(--rojo);
+    color: var(--blancoroto);
+    transition: all .4s ease-in-out;
+}
+.principio:last-child:hover{
+    border: none;
+    background-color: var(--negro);
+    color: var(--blancoroto);
+    transition: all .4s ease-in-out;
+}
+.principio:first-child {
+    color: var(--amarillo);
+    text-decoration: none;
+}
+.principio:nth-child(2) {
+    color: var(--verde);
+    text-decoration: none;
+
+}
+.principio:nth-child(3) {
+    color: var(--azul);
+    text-decoration: none;
+
+}
+.principio:nth-child(4) {
+    color: var(--rojo);
+    text-decoration: none;
+
+}
+.principio:last-child {
+    color: var(--negro);
+    text-decoration: none;
+}
+.principio:first-child  {
+    font-size: 1.6em;
+    top: 10%;
+    left: 10%;
+    transform: rotate(-10deg);
+}
+
+.principio:nth-child(2) {
+    font-size: 1.6em;
+    top: 20%;
+    left: 60%;
+    transform: rotate(15deg);
+}
+
+.principio:nth-child(3){
+    font-size: 1.6em;
+    top: 40%;
+    left: 20%;
+    transform: rotate(-20deg);
+}
+
+.principio:nth-child(4){
+    font-size: 1.6em;
+    top: 50%;
+    left: 60%;
+    transform: rotate(10deg);
+}
+
+.principio:nth-child(5){
+    font-size: 1.6em;
+    top: 75%;
+    left: 25%;
+    transform: rotate(5deg);
+}
+
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 99;
+  }
+  
+  /* Modal base */
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 100;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 400px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.3);
+    padding: 20px;
+    animation: fadeIn 0.3s ease;
+  }
+  
+  /* Contenido */
+  .modal-content {
+    position: relative;
+  }
+  
+  #modal-cortesia{
+    background-color: #fff9d6;
+  }
+
+  #modal-integridad{
+    background-color: #d6ffe0;
+  }
+
+  #modal-perseverancia{
+    background-color:  #d6ecff;
+  }
+
+  #modal-autocontrol{
+    background-color:  #ffe6f0;
+  }
+
+  #modal-espiritu{
+    background-color: #ead6ff;
+  }
+  /* Cierre */
+  .modal .close {
+    position: absolute;
+    top: -10px;
+    right: -5px;
+    font-size: 22px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  /* Fade animation */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translate(-50%, -55%); }
+    to { opacity: 1; transform: translate(-50%, -50%); }
+  }
+
+
+/*Equipo*/
+.equio {
+    content: "";
+    clear: both;
+    display: table; /* Limpia los floats */
+}
+
+.equipo {
+    margin: 50px;
+    text-align: center;
+}
+
+.equipo h2 {
+    font-size: 1.8em;
+    font-family: var(--fuente-base);
+    color: var(--colorfuente);
+    padding: 20px;
+}
+
+/* Contenedor del instructor */
+.equipo__intructores__instructor {
+    float: left;
+    width: 50%;
+    height: 350px;
+    margin-bottom: 30px; 
+}
+
+/* Imagen del instructor */
+.equipo__intructores__instructor img {
+    margin: 20px;
+    float: left;
+    width: 45%;
+    height: 100%; 
+    object-fit: cover;
+    border-radius: 10px;
+    border: 1.5px solid var(--dorado);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+}
+
+/* Tarjeta de texto */
+.tarjeta {
+    height: 100%; 
+    width: 45%;
+    float: left;
+    margin-top: 20px;
+    border-radius: 10px;
+    margin-left: 10px; 
+    position: relative;
+    border: 2px solid var(--dorado); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Centrado del contenido en la tarjeta */
+.tarjeta p {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: justify;
+    margin: 0;
+}
+.tarjeta h3 {
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    margin: 0;
+}
+/* Estilo del título */
+.equipo__intructores__instructor h3 {
+    color: var(--colorfuente);
+    font-weight: bold;
+}
+
+/* Estilo del párrafo */
+.equipo__intructores__instructor p {
+    color: var(--colorfuente);
+    line-height: 1.5em;
+    text-align: justify; 
+}
+
+/*Footer*/
+
+footer {
+    background-color: var(--negro);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    clear: both;
+    position: relative;
+    
+}
+.bloque{
+    vertical-align: top;
+    margin-left: 107px;
+    padding: 20px;
+    display: inline-block;
+    margin-right: 10px;
+    position: relative;
+    top: 10px;
+}
+footer::after{
+    content: "";
+    clear: both;
+}
+footer img {
+    width: 30px;
+    height: auto;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+footer h3 {
+    font-family: var(--fuente-titulo);
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: var(--dorado);
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+}
+
+footer ul li {
+    margin: 5px 0;
+}
+
+footer ul li a {
+    color: white;
+    text-decoration: none;
+    font-family: var(--fuente-base);
+    font-size: 1em;
+    transition: color 0.3s ease;
+}
+
+footer ul li a:hover {
+    color: var(--dorado);
+}
+
+footer p {
+    font-size: 0.9em;
+    color: #bbb;
+    text-align: center;
+}
+
+
+
+/* RESPONSIVE: móvil (pantallas de 768px o menos) */
+@media (max-width: 768px) {
+    .nav {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+    .nav img {
+        margin: 10px;
+    }
+    .nav__toggle {
+        display: block;
+    }
+    .nav__menu {
+        display: none;
+        flex-direction: column;
+        background-color: white;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100vw;
+        padding: 10px 0;
+        z-index: 2000;
+        box-shadow: 0 4px 20px 0 #3335;
+        border-top: 1px solid #eee;
+    }
+    .nav__menu.show {
+        display: flex;
+    }
+    .nav__menu__item {
+        margin: 10px 0;
+        text-align: center;
+        padding-right: 0;
+    }
+
+    /* Sección Sobre Nosotros */
+    .sobre-nosotros {
+        margin: 30px 50px; /* Reducir márgenes laterales */
+        text-align: center;
+    }
+
+    .sobre-nosotros > h2 {
+        font-size: 1.8em; /* Ajuste el tamaño del título */
+        margin-bottom: 20px;
+    }
+
+    .sobre-nosotros__historia {
+        flex-direction: column; /* Apilar elementos verticalmente */
+        display: flex;
+        padding: 0;
+        align-items: center; /* Centrar elementos */
+    }
+
+    .sobre-nosotros__historia div {
+        width: 100%; /* Ocupar todo el ancho */
+        float: none;
+        padding: 0;
+        text-align: justify; /* Centrar texto */
+        margin-bottom: 20px; /* Espacio entre el texto y la imagen */
+    }
+
+    .sobre-nosotros__historia div h3 {
+        font-size: 1.4em; /* Ajuste el tamaño del subtítulo */
+        padding-bottom: 10px;
+    }
+
+    .sobre-nosotros__historia img {
+        width: 90%; /* Ajustar tamaño de la imagen */
+        float: none;
+        margin: 0;
+        margin-bottom: 20px; /* Espacio debajo de la imagen */
+    }
+
+    /* Filosofía y Valores */
+    .valores {
+        margin: 30px 20px;
+        text-align: center;
+        flex-direction: column; /* Apilar elementos verticalmente */
+        display: flex;
+        align-items: center; /* Centrar elementos */
+    }
+
+    .valores__filosofia {
+        padding: 0;
+        width: 100%; /* Ocupar todo el ancho */
+        margin-bottom: 30px; /* Espacio entre la filosofía y los principios */
+    }
+
+    .valores__filosofia h3 {
+        font-size: 1.6em; /* Ajuste el tamaño del título */
+        padding-bottom: 15px;
+    }
+
+    .instagram-media {
+        float: none;
+        margin: 0 auto; /* Centrar el embed de Instagram */
+        width: 90%; /* Ajustar tamaño del embed */
+        height: auto; /* Altura automática para el embed */
+        max-width: 400px; /* Limitar el ancho máximo */
+    }
+
+    .principios {
+        width: 100%; /* Ocupar todo el ancho */
+        height: auto; /* Altura automática */
+        position: static; /* Eliminar posicionamiento absoluto */
+        margin-left: 0; /* Eliminar margen */
+        padding: 20px 0; /* Añadir padding vertical */
+        display: flex; /* Usar flexbox para los botones */
+        flex-wrap: wrap; /* Permitir que los botones se envuelvan */
+        justify-content: center; /* Centrar botones */
+        gap: 15px; /* Espacio entre botones */
+    }
+
+    .principio {
+        position: static; /* Eliminar posicionamiento absoluto */
+        transform: none; /* Eliminar transformaciones */
+        margin-top: 10px;
+        font-size: 1.2em; /* Ajustar tamaño de fuente */
+        width: auto; /* Ancho automático basado en contenido */
+        flex-grow: 1; /* Permitir que los elementos crezcan */
+        max-width: 48%; /* Limitar ancho para que haya dos por fila */
+    }
+
+    /* Modales */
+    .modal {
+        width: 90%;
+        max-width: 300px; /* Reducir el ancho máximo del modal */
+        padding: 15px;
+    }
+
+    .modal .close {
+        font-size: 20px;
+        top: -8px;
+        right: -3px;
+    }
+
+    /* Sección Equipo */
+    .equipo {
+        margin: 30px 20px;
+        text-align: center;
+    }
+
+    .equipo h2 {
+        font-size: 1.8em;
+        padding: 15px 0;
+    }
+
+    .equipo__intructores__instructor {
+        float: none;
+        width: 100%; /* Ocupar todo el ancho */
+        height: auto; /* Altura automática para que se ajuste al contenido */
+        margin-bottom: 30px;
+        display: flex; /* Usar flexbox para alinear imagen y texto */
+        flex-direction: column; /* Apilar imagen y texto */
+        align-items: center; /* Centrar imagen y texto */
+    }
+
+    .equipo__intructores__instructor img {
+        margin: 0;
+        float: none;
+        width: 70%; /* Ajustar tamaño de la imagen */
+        height: auto; /* Altura automática */
+        max-width: 200px; /* Limitar ancho máximo de la imagen */
+        margin-bottom: 20px; /* Espacio debajo de la imagen */
+    }
+
+    .tarjeta {
+        height: auto; /* Altura automática para la tarjeta */
+        width: 90%; /* Ajustar ancho de la tarjeta */
+        float: none;
+        margin: 0;
+        padding: 20px; /* Más padding para el contenido */
+        position: static; /* Eliminar posicionamiento absoluto */
+        transform: none; /* Eliminar transformaciones */
+    }
+
+    .tarjeta h3 {
+        position: static; /* Eliminar posicionamiento absoluto */
+        transform: none; /* Eliminar transformaciones */
+        margin-bottom: 10px; /* Espacio debajo del título */
+        font-size: 1.1em; /* Ajustar tamaño del título */
+    }
+
+    .tarjeta p {
+        position: static; /* Eliminar posicionamiento absoluto */
+        transform: none; /* Eliminar transformaciones */
+        text-align: center; /* Centrar texto en la tarjeta */
+        font-size: 0.95em; /* Ajustar tamaño de la fuente del párrafo */
+    }
+
+  
+    /* Footer */
+    footer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .bloque {
+      width: 90%;
+      margin: 10px 0;
+      padding: 10px;
+    }
+  
+    .bloque ul {
+      text-align: center;
+    }
+  
+    footer p {
+      text-align: center;
+    }
+  }
+  

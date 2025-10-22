@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!DOCTYPE html>
+    <html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="author" content="Diana">
+        <meta name="keywords" content="Taekwondo, Escuela, Artes Marciales">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="contact.css">
+        <link rel="icon" href="../fotos/logo.png">
+        <link href="https://fonts.googleapis.com/css2?family=Anta&family=Scheherazade+New:wght@400;500;600;700&display=swap" rel="stylesheet"></head>
+    <title>Términos y Condiciones</title>
+    <link rel="stylesheet" href="general.css">
+
+</head>
+<body>
+ <!-- Encabezado -->
+ <header class="nav">
+    <img src="../fotos/logo.png" alt="Logo TKD Sierra Nevada">
+    <button class="nav__toggle" aria-label="Abrir menú">&#9776;</button>
+
+    <nav>
+      <ul class="nav__menu">
+        <li class="nav__menu__item"><a href="home.html">Inicio</a></li>
+        <li class="nav__menu__item"><a href="about.html">Nuestra Escuela</a></li>
+        <li class="nav__menu__item"><a href="clases.html">Clases y Sedes</a></li>
+        <li class="nav__menu__item"><a href="sponsors.html">Patrocinadores</a></li>
+        <li class="nav__menu__item"><a href="blog.html">Blog y Noticias</a></li>
+        <li class="nav__menu__item"><a href="contact.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+<!-- Encabezado -->
+<section>
+  <h1>Términos y Condiciones</h1>
+  <p>Bienvenido/a al sitio web oficial de <strong>Taekwon-Do Sierra Nevada</strong>. Al acceder y utilizar esta página, aceptas cumplir con los términos y condiciones que se detallan a continuación. Si no estás de acuerdo con ellos, te recomendamos no utilizar este sitio.</p>
+
+  <h2>1. Propósito del sitio</h2>
+  <p>Este sitio tiene como finalidad informar sobre nuestra escuela de Taekwon-Do, nuestros programas, eventos y servicios relacionados. No se realizan transacciones comerciales a través de esta plataforma.</p>
+
+  <h2>2. Uso aceptable</h2>
+  <p>Al utilizar esta web, te comprometes a:</p>
+  <ul>
+    <li>No utilizarla con fines ilícitos o no autorizados.</li>
+    <li>No intentar acceder sin permiso a secciones restringidas o sistemas internos.</li>
+    <li>No copiar, reproducir o distribuir el contenido sin autorización expresa.</li>
+  </ul>
+
+  <h2>3. Propiedad intelectual</h2>
+  <p>Todos los contenidos de este sitio (textos, imágenes, logotipos, diseño, etc.) son propiedad de <strong>Taekwon-Do Sierra Nevada</strong> y están protegidos por derechos de autor. Su uso no autorizado está prohibido.</p>
+
+  <h2>4. Exclusión de responsabilidad</h2>
+  <p>Nos esforzamos por mantener la información actualizada y precisa, pero no garantizamos su exactitud o disponibilidad continua. No nos responsabilizamos por daños derivados del uso de esta página.</p>
+
+  <h2>5. Enlaces externos</h2>
+  <p>Este sitio puede incluir enlaces a páginas web de terceros. <strong>Taekwon-Do Sierra Nevada</strong> no se responsabiliza del contenido ni de las políticas de privacidad de dichos sitios.</p>
+
+  <h2>6. Modificaciones</h2>
+  <p>Nos reservamos el derecho a modificar estos términos en cualquier momento. Las actualizaciones se publicarán en esta misma página y tendrán efecto inmediato desde su publicación.</p>
+
+  <h2>7. Ley aplicable</h2>
+  <p>Estos términos se rigen por la legislación española. Cualquier controversia será resuelta por los tribunales competentes de Granada.</p>
+
+  <h2>8. Contacto</h2>
+  <div class="contacto">
+    <p>Para cualquier consulta relacionada con estos términos y condiciones, puedes escribirnos a:</p>
+    <p><a href="mailto:taekwondoitfsierranevada@gmail.com">taekwondoitfsierranevada@gmail.com</a></p>
+  </div>
+</section>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="bloque">
+            <h3>Síguenos en redes</h3>
+            <ul>
+                <li><a href="https://www.instagram.com/tkdsierranevada/?igshid=1cwvj5bn6f27r" target="_blank"> <img src="../fotos/insta.png" alt="Instagram">tkdsierranevada</a></li>
+                <li><a href="https://www.facebook.com/tkdsierranevada/" target="_blank"> <img src="../fotos/face.jpg" alt="Facebook">tkdsierranevada </a></li>
+                <li><a href="https://www.tiktok.com/@tkdsierranevada?lang=es" target="_blank"><img src="../fotos/tik.webp" alt="Tiktok">tkdsierranevada</a></li>
+            </ul>
+        </div>
+        <div class="bloque">
+            <h3>Información legal</h3>
+            <ul>
+                <li><a href="terms.html">Términos y Condiciones</a></li>
+                <li><a href="privacy.html">Políticas de Privacidad</a></li>
+                <li><a href="legacy.html">Aviso Legal</a></li>
+                <li><a href="cookies.html">Políticas de Cookies</a></li>
+                <li><a href="contact.html">Contacto</a></li>
+            </ul>
+        </div>
+        <div  class="bloque">
+            <h3>Información de contacto</h3>
+            <ul>
+                <li>Email: taekwondoitfsierranevada@gmail.com</li>
+                <li>Teléfono: +34 642 24 30 24</li>
+            </ul>
+        </div>
+        <div   class="bloque">
+        <p>&copy; 2025 TKD Sierra Nevada. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+    <!-- Footer -->
+    <script defer>
+        const toggle = document.querySelector('.nav__toggle');
+        const menu = document.querySelector('.nav__menu');
+        toggle.addEventListener('click', () => {
+          menu.classList.toggle('show');
+        });
+        // Close menu on link click (mobile)
+        document.querySelectorAll('.nav__menu__item a').forEach(link => {
+          link.addEventListener('click', () => {
+            if (window.innerWidth <= 768) {
+              menu.classList.remove('show');
+            }
+          });
+        });
+      </script>
+</body>
+</html>

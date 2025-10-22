@@ -1,0 +1,531 @@
+:root {
+    --dorado: #fbc83f;
+    --blancoroto: #f5f5f5;
+    --colorfuente: #333;
+    --negro: #000;
+    --tamaño-fuente-base: 16px;
+    --tamaño-fuente-subtitulos: 2em;
+    --tamaño-fuente-titulo: 4em;
+    --fuente-base: "Scheherazade New", serif;
+    --fuente-titulo: "Anta", sans-serif;
+}
+
+/* Reset y base */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navegación */
+.nav {
+    z-index: 1000;
+    background-color: white;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: auto;
+    overflow: visible;
+    box-shadow: 0 0 20px 0 #3335;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.nav img {
+    max-width: 90px;
+    margin: 10px;
+    float: none;
+}
+
+.nav__menu {
+    margin-left: 0;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    position: static;
+    background: none;
+    box-shadow: none;
+    flex-direction: row;
+    padding: 0;
+    z-index: 1002;
+}
+
+.nav__menu__item {
+    padding-right: 10px;
+    margin-right: 20px;
+    margin-top: 0;
+    float: none;
+}
+
+.nav__menu__item a {
+    padding: 5px 15px;
+    color: var(--colorfuente);
+    text-decoration: none;
+    font-family: var(--fuente-base);
+    font-size: 1.2em;
+}
+
+.nav__menu__item a:hover {
+    background-color: var(--dorado);
+    border-radius: 5px;
+    transition: background-color 0.43s ease;
+}
+
+.nav__toggle {
+    display: none;
+    font-size: 2em;
+    background: none;
+    border: none;
+    color: var(--colorfuente);
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    z-index: 1003;
+}
+
+/*Contacto*/
+.contacto{
+    background-color: #ddd8;
+    margin: 50px;
+    text-align: center;
+}
+.contacto h2{
+    padding-top: 20px;
+    color: var(--colorfuente);
+    font-family: var(--fuente-titulo);
+    font-size: 2em;
+}
+.formulario-contacto{
+    vertical-align: top;
+    display: inline-block;
+    width: 60%;
+    text-align: justify;
+}
+.formulario-contacto h3{
+    color: var(--colorfuente);
+    font-family: var(--fuente-base);
+    font-size: 1.6em;
+    text-align: center;
+}
+/* Estilo de los fieldset */
+form{
+    margin-bottom: 30px;
+}
+form fieldset {
+    border: 1.2px solid var(--dorado);
+    border-radius: 10px;
+    padding: 7px;
+}
+
+/* Legend */
+form legend {
+    font-size: 1.2em;
+    font-weight: bold;
+    font-family: var(--fuente-base);
+    color: #555;
+    padding: 0 10px;
+    border-radius: 5px;
+}
+
+/* Etiquetas de los campos */
+form label {
+    font-family: inherit;
+    display: block;
+    padding: 0 2px;
+    font-weight: bold;
+    font-size: 1.2em;
+    color: #333;
+}
+
+/* Inputs y selects */
+form input[type="text"],
+form input[type="email"],
+form input[type="password"],
+form input[type="number"],
+form input[type="date"],
+form select,
+form textarea {
+    width: 100%;
+    padding: 7px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    font-family: inherit;
+}
+
+form input[type="text"]:focus,
+form input[type="email"]:focus,
+form input[type="password"]:focus,
+form input[type="number"]:focus,
+form input[type="date"]:focus,
+form select:focus,
+form textarea:focus {
+    border-color: #fcd979;
+    outline: none;
+}
+form input[type="text"]:invalid,
+form input[type="email"]:invalid,
+form input[type="password"]:invalid,
+form input[type="number"]:invalid,
+form input[type="date"]:invalid,
+form select:invalid,
+form textarea:invalid{
+    border-color: #ca1414ee  !important;
+    outline: none;
+}
+
+/* Radio buttons y checkboxes */
+form input[type="radio"],
+form input[type="checkbox"] {
+    margin-right: 8px;
+}
+/*Elementos seleccionados*/
+option:checked{
+    background-color:  #fedf8b89;
+}
+select:focus{
+    outline: none;
+    border: 1px solid var(--dorado);
+}
+option:focus{
+    background-color:#fcd979;
+}
+option:hover{
+    background-color:#fcd979;
+}
+/* Botones */
+form button {
+    display: inline-block;
+    background-color: #fedf8bd6;
+    color: #000;
+    border: none;
+    padding: 5px 10px;
+    font-size: 1em;
+    font-family: inherit;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+form button:hover {
+    background-color:var(--dorado);
+    transition: all 0.3s ease-in-out;
+}
+
+/* Enlace de términos y condiciones */
+.terms{
+    padding: 20px 0 5px 0;
+}
+form a {
+    color: #e0aa17;
+    text-decoration: none;
+}
+
+form a:hover {
+    text-decoration: underline;
+}
+form input[type="radio"],
+form input[type="checkbox"] {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+/* Estilo de los labels */
+form label {
+    display: inline-block;
+    margin: 0;
+    font-family: inherit;
+    font-size: 1em;
+    color: #333;
+}
+
+/*Ubicacion*/
+.ubicacion{
+    display: inline-block;
+    width: 35%;
+    color: var(--colorfuente);
+    font-family: var(--fuente-base);
+}
+.ubicacion h3{
+    font-size: 1.6em;
+    font-weight: bold;
+    text-align: center;
+}
+.ubicacion p{
+    padding: 20px;
+    font-size: 1.2em;
+    text-align: justify;
+}
+.ubicacion p span{
+    font-weight: bold;
+}
+.ubicacion .mapa{
+    width: 90%;
+    height: 356px;
+    border-radius: 5px;
+}
+.ubicacion .spoti{
+    margin-bottom: 20px;
+    float: right;
+}
+.normal{
+    margin: 20px;
+    float: left;
+}
+.ubicacion h4{
+    padding: 70px 0;
+    vertical-align: middle;
+    font-size: 1.6em;
+    font-family: var(--fuente-titulo);
+    color: var(--colorfuente);
+    text-align: center;
+}
+
+/*Footer*/
+footer {
+    background-color: var(--negro);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    clear: both;
+    position: relative;
+    
+}
+.bloque{
+    vertical-align: top;
+    margin-left: 107px;
+    padding: 20px;
+    display: inline-block;
+    margin-right: 10px;
+    position: relative;
+    top: 10px;
+}
+footer::after{
+    content: "";
+    clear: both;
+}
+footer img {
+    width: 30px;
+    height: auto;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+footer h3 {
+    font-family: var(--fuente-titulo);
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: var(--dorado);
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+}
+
+footer ul li {
+    margin: 5px 0;
+}
+
+footer ul li a {
+    color: white;
+    text-decoration: none;
+    font-family: var(--fuente-base);
+    font-size: 1em;
+    transition: color 0.3s ease;
+}
+
+footer ul li a:hover {
+    color: var(--dorado);
+}
+
+footer p {
+    font-size: 0.9em;
+    color: #bbb;
+    text-align: center;
+}
+
+/* RESPONSIVE: móvil (pantallas de 768px o menos) */
+@media (max-width: 768px) {
+    .nav {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+    .nav img {
+        margin: 10px;
+    }
+    .nav__toggle {
+        display: block;
+    }
+    .nav__menu {
+        display: none;
+        flex-direction: column;
+        background-color: white;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100vw;
+        padding: 10px 0;
+        z-index: 2000;
+        box-shadow: 0 4px 20px 0 #3335;
+        border-top: 1px solid #eee;
+    }
+    .nav__menu.show {
+        display: flex;
+    }
+    .nav__menu__item {
+        margin: 10px 0;
+        text-align: center;
+        padding-right: 0;
+    }
+
+    /* Sección Contacto */
+    .contacto {
+        margin: 20px 15px; /* Reducir márgenes laterales para más espacio */
+        padding: 0; /* Eliminar padding para que los elementos internos controlen su espacio */
+        text-align: center;
+    }
+
+    .contacto h2 {
+        padding-top: 15px; /* Reducir padding superior */
+        font-size: 1.8em; /* Ajustar tamaño del título principal */
+        margin-bottom: 20px;
+    }
+
+    /* Formulario de Contacto */
+    .formulario-contacto {
+        display: block; /* Ocupar todo el ancho */
+        width: 100%; /* Ocupar todo el ancho disponible */
+        padding: 0 10px; /* Pequeño padding interno para que no toque los bordes del viewport */
+        text-align: left; /* Alinear el texto del formulario a la izquierda */
+        margin-bottom: 30px; /* Espacio antes de la sección de ubicación */
+    }
+
+    .formulario-contacto h3 {
+        font-size: 1.4em; /* Ajustar tamaño del subtítulo */
+        margin-bottom: 15px;
+        text-align: center; /* Centrar el subtítulo */
+    }
+
+    form fieldset {
+        padding: 10px; /* Reducir padding del fieldset */
+        margin-bottom: 20px; /* Espacio entre fieldsets */
+    }
+
+    form legend {
+        font-size: 1.1em; /* Ajustar tamaño de la leyenda */
+        padding: 0 8px;
+    }
+
+    form label {
+        font-size: 1em; /* Ajustar tamaño de las etiquetas */
+        margin-bottom: 5px; /* Espacio entre label e input */
+    }
+
+    form input[type="text"],
+    form input[type="email"],
+    form textarea {
+        padding: 10px; /* Aumentar padding para facilitar el toque */
+        font-size: 1.1em; /* Aumentar tamaño de fuente */
+        margin-bottom: 15px;
+    }
+
+    form textarea {
+        rows: 7; /* Más filas para el mensaje */
+        height: auto; /* Altura automática */
+    }
+
+    form button {
+        display: block; /* Botones en su propia línea */
+        width: 100%; /* Ocupar todo el ancho disponible */
+        padding: 10px 15px; /* Aumentar padding para que sean más fáciles de tocar */
+        font-size: 1.1em; /* Aumentar tamaño de fuente */
+        margin-right: 0; /* Eliminar margen derecho */
+        margin-bottom: 15px; /* Espacio entre botones */
+    }
+
+    form button:last-of-type {
+        margin-bottom: 0; /* No hay margen inferior para el último botón */
+    }
+
+    .terms {
+        padding: 15px 0 10px 0; /* Ajustar padding */
+        font-size: 0.95em; /* Ajustar tamaño de fuente */
+        text-align: left; /* Asegurar que el texto se alinee a la izquierda */
+        display: flex; /* Usar flexbox para alinear el checkbox y el texto */
+        align-items: flex-start; /* Alinear arriba si el texto es largo */
+    }
+
+    .terms input[type="checkbox"] {
+        margin-top: 3px; /* Pequeño ajuste para alinear con el texto */
+        flex-shrink: 0; /* Evitar que el checkbox se encoja */
+    }
+
+    .terms label {
+        display: inline; /* Permitir que el label fluya junto al checkbox */
+        margin-left: 5px; /* Espacio entre checkbox y texto */
+    }
+
+
+    /* Ubicación */
+    .ubicacion {
+        display: block; /* Ocupar todo el ancho */
+        width: 100%; /* Ocupar todo el ancho disponible */
+        padding: 0 10px; /* Pequeño padding interno */
+    }
+
+    .ubicacion h3 {
+        font-size: 1.4em; /* Ajustar tamaño del subtítulo */
+        margin-bottom: 15px;
+    }
+
+    .ubicacion p {
+        padding: 10px 0; /* Reducir padding de los párrafos */
+        font-size: 1em; /* Ajustar tamaño de fuente */
+        text-align: left; /* Alinear texto a la izquierda */
+    }
+
+    .ubicacion .mapa {
+        width: 100%; /* El mapa ocupa el 100% del ancho */
+        height: 300px; /* Altura más adecuada para móvil */
+    }
+    
+    /* Si tienes clases .spoti y .normal que flotan */
+    .ubicacion .spoti,
+    .ubicacion .normal {
+        float: none; /* Eliminar float */
+        margin: 20px auto; /* Centrar y añadir margen */
+        width: 100%; /* Ocupar todo el ancho */
+        text-align: center; /* Centrar su contenido si es necesario */
+    }
+
+    /* Footer */
+    footer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .bloque {
+      width: 90%;
+      margin: 10px 0;
+      padding: 10px;
+    }
+  
+    .bloque ul {
+      text-align: center;
+    }
+  
+    footer p {
+      text-align: center;
+    }
+  }

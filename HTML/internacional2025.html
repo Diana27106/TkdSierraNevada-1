@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Diana">
+    <meta name="keywords" content="Taekwondo, Escuela, Artes Marciales">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="articulo.css">
+    <link rel="icon" href="../fotos/logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Anta&family=Scheherazade+New:wght@400;500;600;700&display=swap" rel="stylesheet"></head>
+    <title>Detalle del Evento - Competencia Nacional</title>
+
+</head>
+<body>
+ <!-- Encabezado -->
+ <header class="nav">
+    <img src="../fotos/logo.png" alt="Logo TKD Sierra Nevada">
+    <button class="nav__toggle" aria-label="Abrir menú">&#9776;</button>
+
+    <nav>
+      <ul class="nav__menu">
+        <li class="nav__menu__item"><a href="home.html">Inicio</a></li>
+        <li class="nav__menu__item"><a href="about.html">Nuestra Escuela</a></li>
+        <li class="nav__menu__item"><a href="clases.html">Clases y Sedes</a></li>
+        <li class="nav__menu__item"><a href="sponsors.html">Patrocinadores</a></li>
+        <li class="nav__menu__item"><a href="blog.html">Blog y Noticias</a></li>
+        <li class="nav__menu__item"><a href="contact.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+<!-- Encabezado -->
+
+    <!-- Banner -->
+    <section class="banner">
+        
+        <h1>Taekwon-Do Sierra Nevada brilla en el<strong> English Open 2025</strong></h1>
+        <img src="../fotos/internacional2025.png" alt="Banner Taekwondo Sierra Nevada">
+    </section>
+    
+<!-- Contenido -->
+<div class="contenido">
+    <div class="fecha">
+        <p>2 de marzo de 2025 | Guildford</p>
+    </div>
+    <div>
+        <p>El pasado 2 de marzo, trece competidores de nuestro club Taekwon-Do Sierra Nevada viajaron a Guildford, Inglaterra, para representar a España en el prestigioso English Open 2025. Fue una jornada inolvidable, llena de emoción, entrega y resultados que nos llenan de orgullo.</p>
+    </div>
+
+    <div class="bloqueVideo">
+        <div class="texto">
+            <p>Nuestros atletas lo dieron todo en cada combate, demostrando no solo nivel técnico, sino también garra, respeto y espíritu de equipo. Gracias a su esfuerzo y dedicación, hemos cosechado medallas, experiencia y una huella imborrable en el tatami británico. Este viaje marca el comienzo de una etapa internacional para muchos de ellos… y estamos seguros de que será el primero de muchos.</p>
+            <p>Queremos agradecer de corazón a las familias, que acompañan, sostienen y creen en este camino tanto como nosotros. Su apoyo incondicional es parte esencial de cada logro. Mención especial al Sahyun Nim Iván Altinier y a la Sabum Nim Evelyn Altinier, por su entrega constante, su sabiduría en cada entrenamiento, y por organizar con precisión cada detalle de esta experiencia. Su liderazgo es el motor de este gran proyecto.</p>
+        </div>
+        <img src="../fotos/internacional252.png" alt="Medallas">
+    </div>
+
+    <div>
+        <p>Y por supuesto, gracias a nuestros patrocinadores por hacer posible este sueño. Sin ellos, cruzar fronteras no sería tan accesible.</p>
+        <p>Nos volvemos a Granada con más peso en las mochilas y más fuerza en el corazón.</p>
+        <p>Este equipo ha demostrado que el Taekwon-Do no es solo un deporte, sino una forma de vida. Visualización, meditación, trabajo en equipo y familia: esa es nuestra fórmula.</p>
+    </div>
+
+    <!-- Reflexión Final -->
+    <div class="reflexion">
+        <p>¡Enhorabuena, campeones y campeonas!</p>
+        <p>Siempre juntos por más y mejor. 🥋🌟</p>
+    </div>
+</div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="bloque">
+            <h3>Síguenos en redes</h3>
+            <ul>
+                <li><a href="https://www.instagram.com/tkdsierranevada/?igshid=1cwvj5bn6f27r" target="_blank"> <img src="../fotos/insta.png" alt="Instagram">tkdsierranevada</a></li>
+                <li><a href="https://www.facebook.com/tkdsierranevada/" target="_blank"> <img src="../fotos/face.jpg" alt="Facebook">tkdsierranevada </a></li>
+                <li><a href="https://www.tiktok.com/@tkdsierranevada?lang=es" target="_blank"><img src="../fotos/tik.webp" alt="Tiktok">tkdsierranevada</a></li>
+            </ul>
+        </div>
+        <div class="bloque">
+            <h3>Información legal</h3>
+            <ul>
+                <li><a href="terms.html">Términos y Condiciones</a></li>
+                <li><a href="privacy.html">Políticas de Privacidad</a></li>
+                <li><a href="legacy.html">Aviso Legal</a></li>
+                <li><a href="cookies.html">Políticas de Cookies</a></li>
+                <li><a href="contact.html">Contacto</a></li>
+            </ul>
+        </div>
+        <div  class="bloque">
+            <h3>Información de contacto</h3>
+            <ul>
+                <li>Email: taekwondoitfsierranevada@gmail.com</li>
+                <li>Teléfono: +34 642 24 30 24</li>
+            </ul>
+        </div>
+        <div   class="bloque">
+        <p>&copy; 2025 TKD Sierra Nevada. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+    <!-- Footer -->
+    <script defer>
+        const toggle = document.querySelector('.nav__toggle');
+        const menu = document.querySelector('.nav__menu');
+        toggle.addEventListener('click', () => {
+          menu.classList.toggle('show');
+        });
+        // Close menu on link click (mobile)
+        document.querySelectorAll('.nav__menu__item a').forEach(link => {
+          link.addEventListener('click', () => {
+            if (window.innerWidth <= 768) {
+              menu.classList.remove('show');
+            }
+          });
+        });
+      </script>
+</body>
+</html>

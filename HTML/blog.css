@@ -1,0 +1,585 @@
+:root {
+    --dorado: #fbc83f;
+    --blancoroto: #f5f5f5;
+    --colorfuente: #333;
+    --negro: #000;
+    --tamaño-fuente-base: 16px;
+    --tamaño-fuente-subtitulos: 2em;
+    --tamaño-fuente-titulo: 4em;
+    --fuente-base: "Scheherazade New", serif;
+    --fuente-titulo: "Anta", sans-serif;
+    --azul:#063190;
+}
+
+/* Reset y base */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navegación */
+.nav {
+    z-index: 1000;
+    background-color: white;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: auto;
+    overflow: visible;
+    box-shadow: 0 0 20px 0 #3335;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.nav img {
+    max-width: 90px;
+    margin: 10px;
+    float: none;
+}
+
+.nav__menu {
+    margin-left: 0;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    position: static;
+    background: none;
+    box-shadow: none;
+    flex-direction: row;
+    padding: 0;
+    z-index: 1002;
+}
+
+.nav__menu__item {
+    padding-right: 10px;
+    margin-right: 20px;
+    margin-top: 0;
+    float: none;
+}
+
+.nav__menu__item a {
+    padding: 5px 15px;
+    color: var(--colorfuente);
+    text-decoration: none;
+    font-family: var(--fuente-base);
+    font-size: 1.2em;
+}
+
+.nav__menu__item a:hover {
+    background-color: var(--dorado);
+    border-radius: 5px;
+    transition: background-color 0.43s ease;
+}
+
+.nav__toggle {
+    display: none;
+    font-size: 2em;
+    background: none;
+    border: none;
+    color: var(--colorfuente);
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    z-index: 1003;
+}
+
+/* Noticias y Blog */
+.noticias-blog {
+    margin: 50px;
+    text-align: center;
+    background-color: #eee;
+}
+
+/* Columna Derecha: Última Noticia y Próximos Eventos */
+.columna_derecha {
+    background-color: #eee;
+    float: right;
+    width: 70%;
+}
+
+/* Última Noticia */
+.noticia_principal {
+    border-radius: 3px;
+    margin: 20px;
+    text-align: justify;
+    padding: 20px;
+    background-color: #fbc93f6a;
+    margin-bottom: 30px; 
+}
+.noticia_principal img{
+    border-radius: 5px;
+    height: 376px;
+    object-fit: cover;
+    width: 100%;
+}
+
+.noticia_principal h3{
+    font-size: 2em;
+    font-family: var(--fuente-titulo);
+    color: var(--colorfuente);
+    padding: 5px;
+}
+.noticia_principal p{
+    text-align: justify;
+    padding: 5px;
+    display: block;
+    line-height: 1.5em; 
+    max-height: 1.5em; 
+    overflow: hidden;
+    text-overflow: ellipsis;}
+.noticia_principal a{
+    padding: 5px;
+    color: var(--azul);
+    text-decoration: none;
+}
+.noticia_principal a:hover{
+    text-decoration: underline;
+}
+/* Calendario Eventos */
+.calendario-eventos {
+    margin: 20px;
+    padding: 20px;
+    background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15)), url('/fotos/calendario.png') top/cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0.3, 0);
+    text-align: left;
+}
+
+.calendario-eventos h3 {
+    font-size: 1.6em;
+    font-family: var(--fuente-base);
+    color: var(--colorfuente);
+    text-align: center;
+    margin-top: 25px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.calendario-eventos ul {
+    list-style: none;
+}
+
+.calendario-eventos ul li {
+    padding: 7px;
+    background-color: rgba(255, 255, 255, 0.8); 
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.35);
+    font-size: 1.2em;
+    margin-bottom: 7px;
+}
+
+.calendario-eventos ul li strong {
+    font-weight: bold;
+    color: #333;
+}
+
+.calendario-eventos ul li:before {
+    content: '📅'; 
+    font-size: 1.5em;
+    margin-right: 10px;
+    vertical-align: middle; 
+}
+
+/* Columna Izquierda: Artículos Recientes */
+.articulos-recientes {
+    background-color: #eee;
+    margin: 0 20px;
+    float: right;
+    width: 25%;
+    padding: 20px;
+}
+
+/* Artículos */
+.articulo {
+    padding: 10px;
+    background-color: #fbc93f6a;
+    margin-bottom: 28px; 
+    border-radius: 3px;
+}
+
+/* Estilo de Artículos */
+.articulo img {
+    border-radius: 5px;
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    object-position: center;
+    margin-bottom: 10px;
+}
+
+.articulo h4 {
+    text-align: left;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+.articulo p {
+    text-align: left;
+    display: block;
+    line-height: 1.5em; /* Ajusta según el tamaño de la línea */
+    max-height: 3em; /* 2 líneas = 2 * line-height (1.5em * 2 = 3em) */
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.articulo a {
+    display: block;
+    margin-top: 10px;
+    color: #333;
+    text-decoration: none;
+    text-align: left;
+}
+.articulo a:hover{
+    text-decoration: underline;
+    color: var(--azul);
+    transition: all 0.4s ease-in-out;
+}
+/* Galería */
+.galeria-eventos {
+    position: relative;
+    margin: 60px auto;
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+}
+
+/* Elementos de la galería */
+.galeria-item {
+    position: absolute;
+    background-color: white;
+    padding: 10px;
+    padding-bottom: 30px;
+    width: 23%; 
+    box-shadow: 0 4px 8px rgba(0, 0, 5, 0.2);
+}
+/* Posiciones manuales para cada elemento */
+.galeria-item:first-child {
+    top: 10%; left: 5%; transform: rotate(-8deg);
+}
+
+.galeria-item:nth-child(2) {
+    top: 40%; left: 20%; transform: rotate(6deg);
+}
+
+.galeria-item:nth-child(3) {
+    top: 30%; left: 50%; transform: rotate(-5deg);
+}
+
+.galeria-item:last-child {
+    top: 10%; left: 75%; transform: rotate(7deg);
+}
+.galeria-item:hover {
+    transform: rotate(0deg);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    transition: all 1s ease-in-out;
+}
+
+/* Imágenes*/
+.galeria-item img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+/*Galeria titulo y boton*/
+.galeria-eventos h3{
+    font-size: 2em;
+    font-family: var(--fuente-titulo);
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+    
+}
+.galeria-eventos a{
+    margin: 10px;
+    padding: 7px 15px;
+    border-radius: 10px;
+    background-color: var(--dorado);
+    color: white;
+    text-decoration: none;
+}
+.galeria-eventos a:hover{
+    background-color: #e2b439;
+    transition: background-color .3s ease;
+}
+
+footer {
+    background-color: var(--negro);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    clear: both;
+    position: relative;
+    
+}
+.bloque{
+    vertical-align: top;
+    margin-left: 107px;
+    padding: 20px;
+    display: inline-block;
+    margin-right: 10px;
+    position: relative;
+    top: 10px;
+}
+footer::after{
+    content: "";
+    clear: both;
+}
+footer img {
+    width: 30px;
+    height: auto;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+footer h3 {
+    font-family: var(--fuente-titulo);
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: var(--dorado);
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+}
+
+footer ul li {
+    margin: 5px 0;
+}
+
+footer ul li a {
+    color: white;
+    text-decoration: none;
+    font-family: var(--fuente-base);
+    font-size: 1em;
+    transition: color 0.3s ease;
+}
+
+footer ul li a:hover {
+    color: var(--dorado);
+}
+
+footer p {
+    font-size: 0.9em;
+    color: #bbb;
+    text-align: center;
+}
+
+/* RESPONSIVE: móvil (pantallas de 768px o menos) */
+@media (max-width: 768px) {
+    .nav {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+    .nav img {
+        margin: 10px;
+    }
+    .nav__toggle {
+        display: block;
+    }
+    .nav__menu {
+        display: none;
+        flex-direction: column;
+        background-color: white;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100vw;
+        padding: 10px 0;
+        z-index: 2000;
+        box-shadow: 0 4px 20px 0 #3335;
+        border-top: 1px solid #eee;
+    }
+    .nav__menu.show {
+        display: flex;
+    }
+    .nav__menu__item {
+        margin: 10px 0;
+        text-align: center;
+        padding-right: 0;
+    }
+
+    /* Sección Noticias y Blog */
+    .noticias-blog {
+        margin: 20px; /* Reducir márgenes laterales */
+        text-align: center;
+        padding: 0; /* Eliminar padding que pueda causar problemas */
+    }
+
+    /* Columnas (se apilan en móvil) */
+    .columna_derecha,
+    .columna_izquierda {
+        float: none; /* Eliminar float para que se apilen */
+        width: 100%; /* Ocupar todo el ancho */
+        margin: 0; /* Eliminar márgenes específicos de columna */
+        padding: 0; /* Eliminar padding de columna */
+    }
+
+    /* Noticia Principal */
+    .noticia_principal {
+        margin: 0 0 20px 0; /* Ajustar margen inferior */
+        padding: 15px; /* Reducir padding interno */
+    }
+
+    .noticia_principal img {
+        height: auto; /* Altura automática para mantener proporción */
+        max-height: 250px; /* Limitar altura máxima */
+    }
+
+    .noticia_principal h3 {
+        font-size: 1.5em; /* Reducir tamaño del título */
+        padding: 0 0 10px 0; /* Ajustar padding */
+        text-align: left;
+    }
+
+    .noticia_principal p {
+        font-size: 0.95em; /* Reducir tamaño de fuente */
+        line-height: 1.4em;
+        max-height: none; /* Mostrar todo el párrafo en móvil */
+        overflow: visible;
+        text-overflow: clip;
+        padding: 0 0 10px 0;
+    }
+
+    .noticia_principal a {
+        padding: 0;
+        text-align: left;
+        display: inline-block; /* Permitir que el link ocupe solo el espacio necesario */
+    }
+
+    /* Calendario de Eventos */
+    .calendario-eventos {
+        margin: 20px 0; /* Ajustar márgenes */
+        padding: 15px;
+        background-size: cover; /* Asegurar que la imagen de fondo se ajuste */
+        background-position: center; /* Centrar la imagen de fondo */
+    }
+
+    .calendario-eventos h3 {
+        font-size: 1.4em; /* Reducir tamaño del título */
+        margin-top: 15px; /* Ajustar margen */
+        margin-bottom: 10px;
+    }
+
+    .calendario-eventos ul li {
+        font-size: 0.95em; /* Reducir tamaño de fuente */
+        padding: 10px; /* Ajustar padding */
+        margin-bottom: 5px; /* Menos espacio entre ítems */
+    }
+
+    .calendario-eventos ul li:before {
+        font-size: 1.2em; /* Ajustar tamaño del icono */
+        margin-right: 8px; /* Reducir margen del icono */
+    }
+
+    /* Artículos Recientes */
+    .articulos-recientes {
+        width: 100%;
+        margin: 20px 0 0 0; /* Ajustar márgenes */
+        padding: 0; /* Eliminar padding para que los artículos controlen su propio padding */
+    }
+
+    .articulo {
+        margin-bottom: 20px; /* Reducir espacio entre artículos */
+        padding: 15px; /* Ajustar padding interno */
+    }
+
+    .articulo img {
+        height: 150px; /* Ajustar altura de las imágenes de artículo */
+        margin-bottom: 8px; /* Reducir margen inferior */
+    }
+
+    .articulo h4 {
+        font-size: 1.1em; /* Reducir tamaño del título de artículo */
+        margin-bottom: 8px;
+    }
+
+    .articulo p {
+        font-size: 0.9em; /* Reducir tamaño de fuente del párrafo */
+        margin-bottom: 8px;
+    }
+
+    .articulo a {
+        font-size: 0.9em; /* Reducir tamaño de fuente del enlace */
+        margin-top: 5px;
+    }
+
+    /* Galería de Eventos */
+    .galeria-eventos {
+        position: static; /* Eliminar posicionamiento absoluto */
+        height: auto; /* Altura automática */
+        margin: 40px 0; /* Ajustar margen superior e inferior */
+        overflow: visible; /* Permitir que los elementos se desborden */
+        display: flex; /* Usar flexbox para organizar los ítems */
+        flex-direction: column; /* Apilar ítems verticalmente */
+        align-items: center; /* Centrar horizontalmente */
+    }
+
+    .galeria {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .galeria-item {
+        position: static; /* Eliminar posicionamiento absoluto de los ítems */
+        width: 90%; /* Ocupar casi todo el ancho */
+        margin-bottom: 25px; /* Espacio entre cada foto */
+        transform: rotate(0deg) !important; /* Eliminar rotación */
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Sombra más sutil */
+        transition: none; /* Eliminar transiciones para evitar saltos en móvil */
+    }
+
+    .galeria-item:hover {
+        transform: rotate(0deg); /* Asegurarse de que no haya rotación en hover */
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Mantener la misma sombra */
+    }
+
+    .galeria-item img {
+        height: 300px; /* Ajustar altura de las imágenes de la galería */
+    }
+
+    .galeria-eventos h3 {
+        font-size: 1.6em; /* Ajustar tamaño del título de la galería */
+        margin-bottom: 25px;
+    }
+
+    .galeria-eventos .ver-mas { /* Usar la clase específica 'ver-mas' para el botón */
+        margin: 20px auto 0 auto; /* Centrar el botón y dar espacio superior */
+        padding: 12px 30px; /* Aumentar padding del botón */
+        font-size: 1.1em;
+        display: block; /* Hacer que el botón ocupe su propio bloque */
+        width: fit-content; /* Ajustar el ancho al contenido */
+        margin-bottom: 10px;
+    }
+
+    /* Footer */
+    footer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .bloque {
+      width: 90%;
+      margin: 10px 0;
+      padding: 10px;
+    }
+  
+    .bloque ul {
+      text-align: center;
+    }
+  
+    footer p {
+      text-align: center;
+    }
+  }

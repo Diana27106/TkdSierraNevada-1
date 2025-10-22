@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Diana">
+    <meta name="keywords" content="Taekwondo, Escuela, Artes Marciales">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="contact.css">
+    <link rel="icon" href="../fotos/logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Anta&family=Scheherazade+New:wght@400;500;600;700&display=swap" rel="stylesheet"></head>
+    <title>Contacto - TKD Sierra Nevada</title>
+</head>
+<body>
+ <!-- Encabezado -->
+ <header class="nav">
+    <img src="../fotos/logo.png" alt="Logo TKD Sierra Nevada">
+    <button class="nav__toggle" aria-label="Abrir menú">&#9776;</button>
+
+    <nav>
+      <ul class="nav__menu">
+        <li class="nav__menu__item"><a href="home.html">Inicio</a></li>
+        <li class="nav__menu__item"><a href="about.html">Nuestra Escuela</a></li>
+        <li class="nav__menu__item"><a href="clases.html">Clases y Sedes</a></li>
+        <li class="nav__menu__item"><a href="sponsors.html">Patrocinadores</a></li>
+        <li class="nav__menu__item"><a href="blog.html">Blog y Noticias</a></li>
+        <li class="nav__menu__item"><a href="contact.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+<!-- Encabezado -->
+    
+    <!-- Sección Contacto -->
+    <section class="contacto">
+        <h2>Contacto</h2>
+        <!-- Formulario de Contacto -->
+        <div class="formulario-contacto">
+            <h3>Formulario de Contacto</h3>
+            <form action="procesar-formulario.php" method="POST">
+                <fieldset>
+                    <legend>Registrate</legend>
+                    <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+
+                <label for="email">Correo Electrónico:</label>
+                <input type="email" id="email" name="email" placeholder="Tu correo electrónico" required>
+                </fieldset>
+                
+                <fieldset>
+                    <legend>Mensaje</legend>
+                    <label for="mensaje">Mensaje:</label>
+                    <textarea id="mensaje" name="mensaje" placeholder="Escribe tu mensaje y añada los medios de contacto por el cual desee comunicarse: número de teléfono, correo electónico o redes sociales." rows="5" required></textarea>
+                </fieldset>
+                <fieldset>
+                    <legend>Enviar info</legend>
+                    <button type="submit">Enviar</button>
+                <button type="reset">Reestablecer</button>
+                <div class="terms">
+                    <input type="checkbox" required style="accent-color: #fbc83f;">
+                    <label for="privacy">Acepto la <a href="privacy.html"> Políticas de Privacidad </a> y los <a href="terms.html"> Términos y Condiciones </a></label>
+                </div>
+                </fieldset>
+                
+            </form>
+        </div>
+
+        <!-- Ubicación -->
+        <div class="ubicacion">
+            <h3>Ubicación</h3>
+            <p><span>Dirección: </span> Cam. Puente del Palo, 2, 18194 Churriana de la Vega, Granada.</p>
+            <p><span>Tlf: </span>  642 24 30 24</p>
+            <p><span>Email: </span> taekwondoitfsierranevada@gmail.com</p>
+            <iframe class='mapa' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3180.186417740248!2d-3.6364079254635464!3d37.14826664800412!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd71fb3a9ffc182f%3A0x42d0c77f192a03b5!2sTaekwon%20Do%20Sierra%20Nevada%20SEDES%20POR%20TODA%20GRANADA%20Y%20ALREDEDORES!5e0!3m2!1ses!2ses!4v1733521808365!5m2!1ses!2ses" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="bloque">
+            <h3>Síguenos en redes</h3>
+            <ul>
+                <li><a href="https://www.instagram.com/tkdsierranevada/?igshid=1cwvj5bn6f27r" target="_blank"> <img src="../fotos/insta.png" alt="Instagram">tkdsierranevada</a></li>
+                <li><a href="https://www.facebook.com/tkdsierranevada/" target="_blank"> <img src="../fotos/face.jpg" alt="Facebook">tkdsierranevada </a></li>
+                <li><a href="https://www.tiktok.com/@tkdsierranevada?lang=es" target="_blank"><img src="../fotos/tik.webp" alt="Tiktok">tkdsierranevada</a></li>
+            </ul>
+        </div>
+        <div class="bloque">
+            <h3>Información legal</h3>
+            <ul>
+                <li><a href="terms.html">Términos y Condiciones</a></li>
+                <li><a href="privacy.html">Políticas de Privacidad</a></li>
+                <li><a href="legacy.html">Aviso Legal</a></li>
+                <li><a href="cookies.html">Políticas de Cookies</a></li>
+                <li><a href="contact.html">Contacto</a></li>
+            </ul>
+        </div>
+        <div  class="bloque">
+            <h3>Información de contacto</h3>
+            <ul>
+                <li>Email: taekwondoitfsierranevada@gmail.com</li>
+                <li>Teléfono: +34 642 24 30 24</li>
+            </ul>
+        </div>
+        <div   class="bloque">
+        <p>&copy; 2025 TKD Sierra Nevada. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+    <!-- Footer -->
+    <script defer>
+        const toggle = document.querySelector('.nav__toggle');
+        const menu = document.querySelector('.nav__menu');
+        toggle.addEventListener('click', () => {
+          menu.classList.toggle('show');
+        });
+        // Close menu on link click (mobile)
+        document.querySelectorAll('.nav__menu__item a').forEach(link => {
+          link.addEventListener('click', () => {
+            if (window.innerWidth <= 768) {
+              menu.classList.remove('show');
+            }
+          });
+        });
+      </script>
+</body>
+</html>
